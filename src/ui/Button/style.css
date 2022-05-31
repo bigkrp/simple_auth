@@ -1,0 +1,55 @@
+.Button {
+    padding: 16px 8px;
+    background-image: none;
+    background-color: transparent;
+    border: 1px solid;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    transition: transform var(--transition-time) ease;
+    text-transform: uppercase;
+}
+
+.Button::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    transform: translate(8px, 8px);
+    transition: transform var(--transition-time) ease;
+    z-index: -1;
+}
+
+.Button:hover {
+    transform: translate(2px, 2px);
+}
+.Button:hover::after {
+    transform: translate(6px, 6px);
+}
+
+.Button:active {
+    transform: translate(4px, 4px);
+}
+.Button:active::after {
+    transform: translate(2px, 2px);
+}
+
+.ButtonSmall {
+    padding: 4px;
+    background-image: none;
+    background-color: transparent;
+    border: 1px solid;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    transition: transform var(--transition-time) ease;
+    text-transform: uppercase;
+}

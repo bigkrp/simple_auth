@@ -1,0 +1,15 @@
+.TopBar {
+    padding: 16px 64px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.TopBar-title {
+    font-size: 1.4rem;
+    color: var(--title-color);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}

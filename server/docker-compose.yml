@@ -1,0 +1,22 @@
+version: "2"
+services:
+  app:
+    image: app
+    container_name: auth_server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+     - ./tmp/npm:/root/.npm:z
+     - .:/app:z
+    ports:
+      - "8666:8666"
+    links:
+      - mongo
+    env_file:
+      - ../.env
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"

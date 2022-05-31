@@ -1,0 +1,29 @@
+.Form {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--card-background);
+    padding: 24px;
+    border: 1px solid;
+    box-shadow: var(--card-box-shadow);
+    position: relative;
+    z-index: 1;
+
+    min-width: 33vw;
+}
+
+.Form fieldset {
+    display: flex;
+    flex-direction: column;
+}
+.Form label {
+    margin-bottom: 8px;
+}
+
+.Form input {
+    margin-bottom: 16px;
+}
+
+.FormSubmit {
+    margin: 32px 0;
+}
